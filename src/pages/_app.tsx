@@ -1,8 +1,28 @@
-import React, { createContext, useReducer } from "react";
+import { NextComponentType } from 'next';
+import { AppContext, AppInitialProps, AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = (
+  props
+) => {
+  const { Component, pageProps } = props;
   return (
-    <Component {...pageProps} />
+    <>
+      <Component {...pageProps} />
+    </>
   );
-}
+};
+
+MyApp.getInitialProps = async ({
+  Component,
+  ctx,
+}: AppContext): Promise<AppInitialProps> => {
+  let pageProps = {};
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  return { pageProps };
+};
+
 export default MyApp;
