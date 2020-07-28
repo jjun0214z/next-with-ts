@@ -1,15 +1,11 @@
 import { NextComponentType } from 'next';
 import { AppContext, AppInitialProps, AppProps } from 'next/app';
 
-const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = (
-  props
-) => {
-  const { Component, pageProps } = props;
-  return (
-    <>
-      <Component {...pageProps} />
-    </>
-  );
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}) => {
+  return <Component {...pageProps} />;
 };
 
 MyApp.getInitialProps = async ({

@@ -1,7 +1,11 @@
+import Counter from './Counter';
+import { ReactElement } from 'react';
 import { NextPage } from 'next';
 
-const App: NextPage = () => {
-  return <div>121212</div>;
-};
+const App: NextPage<ReactElement> = () => (
+  <div>
+    <Counter />
+  </div>
+);
 
 export default App;
