@@ -1,9 +1,9 @@
 import { Component, ReactNode } from 'react';
 import { inject, observer } from 'mobx-react';
-import { AuthTypes } from '@/types/store';
+import { AuthTypes } from '@type/store';
 
 interface PropsTypes {
-  authStore: AuthTypes;
+  authStore?: AuthTypes;
 }
 
 @inject(({ authStore }) => ({

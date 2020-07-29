@@ -1,5 +1,5 @@
 import { observable, action } from 'mobx';
-import { AuthTypes } from '@/types/store';
+import { AuthTypes } from '@type/store';
 
 export const initialAuth: AuthTypes = {
   payload: {
@@ -8,7 +8,8 @@ export const initialAuth: AuthTypes = {
 };
 
 export default class AuthStore {
-  @observable payload = initialAuth.payload;
+  @observable
+  payload = initialAuth.payload;
 
   constructor(initialData = initialAuth) {
     this.payload = initialData.payload;
