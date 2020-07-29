@@ -2,6 +2,7 @@ import { NextComponentType } from 'next';
 import { AppContext, AppInitialProps, AppProps } from 'next/app';
 import { Provider } from 'mobx-react';
 import RootStore from '@/store';
+import '@style/global.module.scss';
 
 const root = new RootStore();
 

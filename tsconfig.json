@@ -15,10 +15,12 @@
     "jsx": "preserve",
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "sourceMap": false,
     "paths": {
       "@/*": ["src/*"],
       "@type/*": ["src/types/*"],
-      "@cp/*": ["src/components/*"]
+      "@cp/*": ["src/components/*"],
+      "@style/*": ["src/assets/styles/*"]
     }
   },
   "exclude": ["node_modules"],
