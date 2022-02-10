@@ -33,7 +33,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "mobx-react-devtools": "^6.1.1",
     "next-compose-plugins": "^2.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   }
